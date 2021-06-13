@@ -1,0 +1,10 @@
+.cart-icon{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.navbar-cart-count{
+    border: 2px solid rgb(233, 226, 226);
+    border-radius:60%;
+    padding: 7px;
+}

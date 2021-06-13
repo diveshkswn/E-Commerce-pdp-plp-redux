@@ -1,0 +1,90 @@
+.product-main{
+margin-bottom: 30px;
+    width: 70%;
+    background-color: white;
+    padding: 1%;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+   
+    justify-content: space-between;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+    
+}
+
+
+p:nth-last-child(1){
+    font-weight: 700;
+}
+
+p:nth-last-child(1)::after{
+    content: '₹';
+}
+
+.product-image{
+    flex: .2;
+    width: 100px;
+    border-radius: 15px;
+}
+
+
+.product_details{
+    flex: .4;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    padding: 20px;
+}
+
+.product_buttons{
+    flex: .2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 1rem;
+}
+
+
+@media(min-width:800px){
+    .btn{
+        width: 180px !important;
+    }
+}
+
+
+.btn:hover{
+
+background-color: green !important;
+transition: all .6s;
+}
+
+
+
+@media(max-width:700px){
+    .product-image{
+        width: 100px;
+        margin: auto;
+    }
+   .product_details p,h4{
+text-align: justify;
+   }
+
+    .product-main{
+
+        width: 90%;
+        background-color: white;
+        flex-direction: column;
+     
+        justify-content: space-between;
+    }
+
+
+    .product_buttons{
+ 
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+     
+    }
+}
