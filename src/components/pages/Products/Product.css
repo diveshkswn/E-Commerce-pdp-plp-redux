@@ -13,11 +13,11 @@ margin-bottom: 30px;
 }
 
 
-p:nth-last-child(1){
+.product_details p:nth-last-child(1){
     font-weight: 700;
 }
 
-p:nth-last-child(1)::after{
+.product_details p:nth-last-child(1)::after{
     content: '₹';
 }
 
