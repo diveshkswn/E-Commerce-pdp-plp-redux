@@ -5,6 +5,8 @@
 
 .navbar-cart-count{
     border: 2px solid rgb(233, 226, 226);
-    border-radius:60%;
+    border-radius:50% !important;
+    width: 10px;
+    height: 10px;
     padding: 7px;
 }
