@@ -1,0 +1,5 @@
+export const ADD_TO_CART = 'ADD_TO_CART';
+export const REMOVE_FROM_CART = 'REMOVE_FROM_CART';
+export const ADJUST_QTY = 'ADJUST_QTY';
+export const VIEW_CURRENT_ITEM = 'VIEW_CURRENT_ITEM';
+export const LOAD_PRODUCTS = 'LOAD_PRODUCTS';

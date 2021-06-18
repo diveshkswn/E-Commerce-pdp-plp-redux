@@ -1,10 +1,22 @@
 .cart-main{
+    padding-top: 100px;
     display: flex;
     flex-direction: row;
     justify-content: center;
 
 }
 
+.cart-totalItems{
+    font-size: large;
+    font-weight: 500;
+}
+
+.cart-totalItems p{
+    background-color: rgb(32, 29, 29);
+    border-radius: 5px;
+    padding: 5px;
+    color:aliceblue;
+}
 
 .cart-items-summary{
     border-radius: 5px;
@@ -53,7 +65,13 @@
 
 
 @media(max-width : 800px){
+
+    .cart-main{
+        flex-direction: column;
+        align-items: center;
+    }
     .cart-items-summary{
+        width: 95%;
         flex-direction: column;
         align-items: center;
         justify-content: space-around;

@@ -4,9 +4,15 @@ import './Product.css';
 import { Link } from 'react-router-dom';
 import { IoBagAdd } from 'react-icons/io5';
 import { VscPreview } from 'react-icons/vsc';
+import { useDispatch } from 'react-redux';
+import { addToCart, viewCurrentItem } from '../../../redux/shopping/shopping-actions';
 
 function Product(props) {
-  const { name, price, img } = props;
+  const {
+    id, name, price, img,
+  } = props;
+  const dispatch = useDispatch();
+
   return (
     <>
       <div className="product-main">
@@ -24,15 +30,15 @@ function Product(props) {
           </p>
         </div>
         <div className="product_buttons">
-          <button className="btn btn-dark" type="button">
+          <button onClick={() => { dispatch(addToCart(id)); }} className="btn btn-dark" type="button">
             {' '}
             <IoBagAdd size="25" />
             {' '}
             <span>Add to Cart</span>
 
           </button>
-          <Link to="/product/01">
-            <button className="btn btn-secondary" type="button">
+          <Link to="/product">
+            <button className="btn btn-secondary" type="button" onClick={() => { dispatch(viewCurrentItem(id)); }}>
 
               {' '}
               <VscPreview size="25" />
