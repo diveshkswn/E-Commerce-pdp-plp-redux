@@ -5,7 +5,7 @@ const INITIAL_STATE = {
 
   products: [], // {id, title, description , price, img }
   cart: [], // {id, title, description , price, img , qty}
-  currentItem: 'lol',
+  currentItem: 'NONE',
 };
 
 // We can create one more action to just load data from api to Initial State
@@ -62,7 +62,8 @@ function shopReducer(state = INITIAL_STATE, action) {
       return { ...state, cart: updatedCartListADJUSTQTY };
 
     case actionTypes.VIEW_CURRENT_ITEM:
-      return { };
+      const currentItem = state.products.find((i) => i.id === action.payload);
+      return { ...state, currentItem };
 
     default:
       return state;

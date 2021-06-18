@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { IoBagAdd } from 'react-icons/io5';
 import { VscPreview } from 'react-icons/vsc';
 import { useDispatch } from 'react-redux';
-import { addToCart } from '../../../redux/shopping/shopping-actions';
+import { addToCart, viewCurrentItem } from '../../../redux/shopping/shopping-actions';
 
 function Product(props) {
   const {
@@ -37,8 +37,8 @@ function Product(props) {
             <span>Add to Cart</span>
 
           </button>
-          <Link to="/product/01">
-            <button className="btn btn-secondary" type="button">
+          <Link to="/product">
+            <button className="btn btn-secondary" type="button" onClick={() => { dispatch(viewCurrentItem(id)); }}>
 
               {' '}
               <VscPreview size="25" />

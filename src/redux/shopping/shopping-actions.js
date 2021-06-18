@@ -28,10 +28,10 @@ function updateQty(itemId, value) {
   };
 }
 
-function viewCurrentItem(item) {
+function viewCurrentItem(itemId) {
   return {
     type: actionTypes.VIEW_CURRENT_ITEM,
-    payload: item,
+    payload: itemId,
   };
 }
 
