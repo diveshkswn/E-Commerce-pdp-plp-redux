@@ -34,3 +34,14 @@ function viewCurrentItem(item) {
     payload: item,
   };
 }
+
+function loadProducts(productsArray) {
+  return {
+    type: actionTypes.LOAD_PRODUCTS,
+    payload: productsArray,
+  };
+}
+
+export {
+  loadProducts, viewCurrentItem, updateQty, removefromCart, addToCart,
+};

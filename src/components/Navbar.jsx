@@ -4,8 +4,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { FiShoppingCart } from 'react-icons/fi';
 import './Navbar.css';
+import { useSelector } from 'react-redux';
 
 function Navbar() {
+  const cartCount = useSelector((state) => state.shop.cart);
+  let itemCount = 0;
+  cartCount.forEach((i) => { itemCount += i.qty * 1; });
   return (
     <>
 
@@ -42,7 +46,7 @@ function Navbar() {
                     <FiShoppingCart size={30} />
                   </span>
 
-                  <span className="navbar-cart-count">0</span>
+                  <span className="navbar-cart-count">{itemCount}</span>
                 </Link>
 
               </li>
